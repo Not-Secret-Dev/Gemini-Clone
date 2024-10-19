@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+    <title>Gemini Clone | Not-Secret-Dev</title>
+  </head>
+  <body>
+    <header>
+      <div class="text">
+        <div class="title">
+          <p>Gemini Chatbot</p>
+        </div>
+        <div class="subtitle">By Aayan Mumtaz</div>
+      </div>
+      <img src="./images/gemini.svg" alt="Gemini image" class="image" />
+    </header>
+    <main>
+      <section class="suggestions">
+        <div class="card card-1">
+          <div class="content">
+            <div class="title">
+              Help me plan a game night with my 5 best friends for under 100$.
+            </div>
+            <div class="icons-holder edit-icon">
+              <div class="icon">
+                <img src="./Icons/edit.png" alt="Edit" height="18" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-2">
+          <div class="content">
+            <div class="title">
+              What are the best tips to improve my public speaking skills?
+            </div>
+            <div class=icons-holder edit-icon">
+              <div class="icon">
+                <img src="./Icons/idea.png" alt="Edit" height="21" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-3">
+          <div class="content">
+            <div class="title">
+              Can you help me find the latest news on web development?
+            </div>
+            <div class="icons-holder edit-icon">
+              <div class="icon">
+                <img src="./Icons/compass.png" alt="Edit" height="21" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-4">
+          <div class="content">
+            <div class="title">
+              Write a Javascript code to sum all elements in an array.
+            </div>
+            <div class="icons-holder edit-icon">
+              <div class="icon">
+                <img src="./Icons/web-development.png" alt="Edit" height="18" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="chat-list">
+        <div class="message outgoing">
+          <div class="message-content">
+            <img src="./images/user.jpg" alt="User image" class="avatar">
+            <p class="text"></p>
+          </div>
+        </div>
+        <div class="message incoming">
+          <div class="message-content">
+            <img src="./images/gemini.svg" alt="Gemini image" class="avatar">
+            <p class="text"></p>
+          </div>
+          <div class="copy-icon">
+            <div class="copy">
+              <img src="./Icons/copy.png" alt="copy text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="input-section">
+        <div class="input">
+          <input type="text" placeholder="Enter a prompt here" id="prompt" >
+          <div class="send-btn-container">
+            <img src="./Icons/send.png" alt="Send" height="23px" id="send-btn" >
+          </div>
+        </div>
+        <div class="side-btns">
+          <div class="light-mode-container">
+            <img src="./Icons/sunny.png" alt="Light Mode" height="25px" id="light-mode-btn" >
+          </div>
+          <div class="bin-container">
+            <img src="./Icons/bin.png" alt="Trash" height="23px" id="clear-btn" >
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer style="text-align: center; margin: 12px;">
+      Gemini may display inaccurate info, including about people, so double-check its response.
+    </Footer>
+    <script src="app.js"></script>
+  </body>
+</html>

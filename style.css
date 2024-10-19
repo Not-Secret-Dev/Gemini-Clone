@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #242424;
+}
+
+header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 120px;
+}
+
+header .title {
+  font-size: 50px;
+  font-weight: 550;
+  background: -webkit-linear-gradient(45deg, #4e80e6, #da6476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .subtitle {
+  font-size: 38px;
+  font-weight: 500;
+  color: #a1a1a1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .suggestions {
+  margin: 64px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+main .suggestions .card {
+  background-color: #383838;
+  padding: 3px 13px;
+  width: 200px;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .suggestions .card .content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 32px;
+}
+
+main .suggestions .card .icons-holder {
+  display: flex;
+  justify-content: right;
+}
+
+main .suggestions .card .icons-holder .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  border-radius: 100px;
+  width: 38px;
+  height: 38px;
+}
+
+main .input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .input-section .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .input-section input {
+  width: 650px;
+  height: 55px;
+  padding: 0 23px;
+  outline: none;
+  border: none;
+  border-radius: 2rem 0 0 2rem;
+  background-color: #383838;
+}
+
+main .input-section .input .send-btn-container {
+  height: 55px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 2rem 2rem 0;
+  background-color: #383838;
+}
+
+main .input-section input::placeholder {
+  font-weight: 600;
+  font-size: medium;
+  color: #a1a1a1;
+}
+
+.side-btns {
+  display: flex;
+}
+
+.light-mode-container,
+.bin-container {
+  width: 55px;
+  height: 55px;
+  margin-left: 12px;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #343434;
+}
+
+.card {
+  transition: 0.4s all;
+}
+
+.card:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+img {
+  transition: 0.4s all;
+}
+
+img:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.chat-list {
+  margin-top: 23px;
+  min-height: 78vh;
+  min-width: 1000px;
+  max-width: 1000px;
+  text-align: justify;
+  display: none;
+}
+
+.chat-list .message .message-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.chat-list .incoming {
+  margin-top: 1rem;
+}
+
+.chat-list .message .copy-icon {
+  margin-left: 50px;
+}
+
+.copy-icon .copy {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:active {
+  background-color: #383838;
+}
+
+.copy-icon .copy:hover {
+  background-color: #383838;
+}
+
+.chat-list .message .text {
+  color: white;
+}
+
+.chat-list .message .avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: flex-start;
+}
