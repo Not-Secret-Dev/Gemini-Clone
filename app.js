@@ -7,6 +7,9 @@ const aiTextElement = document.querySelector(".incoming .text");
 const userTextElement = document.querySelector(".outgoing .text");
 const copyBtn = document.querySelector(".copy");
 const cards = document.querySelectorAll(".card");
+const logo = document.querySelector("#logo");
+const clearBtn = document.querySelector("#clear-btn");
+const toggleLightModeBtn = document.querySelector("#light-mode-btn");
 
 let userMessage = null;
 let geminiMessage = null;
@@ -16,17 +19,22 @@ const API_URL =
 
 const formatText = (text) => {
   return text
-    .replace(/\*\*\*(.*?)\*\*\*/g, "<strong>$1</strong>") // Bold for triple asterisks
-    .replace(/\*(.*?)\*/g, "<em>$1</em>") // Italics for single asterisks (optional, if you need it)
-    .replace(/\n/g, "<br>"); // Line breaks (optional)
+    .replace(/\*\*\*(.*?)\*\*\*/g, "<strong>$1</strong>")
+    .replace(/#([a-zA-Z0-9_-]+)/g, "<span class='hashtag'>#$1</span>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(/\n/g, "<br>");
 };
 
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    const cardPrompt = card.querySelector(".content .title").innerHTML;
-    inputPrompt.value = cardPrompt; // Set the prompt input with selected card text
+    const cardPrompt = card.querySelector(".content .title").innerHTML.trim();
+    inputPrompt.value = cardPrompt;
     generateAPIResponse();
   });
+});
+
+logo.addEventListener("click", () => {
+  location.reload();
 });
 
 copyBtn.addEventListener("click", () => {});
