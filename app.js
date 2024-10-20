@@ -9,7 +9,6 @@ const copyBtn = document.querySelector(".copy");
 const cards = document.querySelectorAll(".card");
 const logo = document.querySelector("#logo");
 const clearBtn = document.querySelector("#clear-btn");
-const toggleLightModeBtn = document.querySelector("#light-mode-btn");
 
 let userMessage = null;
 let geminiMessage = null;
@@ -35,6 +34,10 @@ cards.forEach((card) => {
 
 logo.addEventListener("click", () => {
   location.reload();
+});
+
+clearBtn.addEventListener("click", () => {
+  inputPrompt.value = "";
 });
 
 copyBtn.addEventListener("click", () => {});
